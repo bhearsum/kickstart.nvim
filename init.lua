@@ -836,5 +836,9 @@ require('lazy').setup({
   },
 })
 
+-- at the bottom to make sure no plugins override this
+vim.opt.textwidth = 0
+vim.opt.wrapmargin = 0
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

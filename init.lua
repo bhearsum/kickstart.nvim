@@ -521,10 +521,20 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'bash-language-server',
+        'clangd',
+        'docker-compose-language-service',
+        'dockerfile-language-server',
+        'gopls',
+        'marksman',
+        'prettierd',
         'python-lsp-server',
+        'rstcheck',
         'ruff',
         'rust-analyzer',
+        'shellcheck',
         'stylua', -- Used to format Lua code
+        'typescript-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
